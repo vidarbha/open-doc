@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 title: Sensor Data Exchange
 remote_theme: opendocsg/opendoc-theme
-=======
-title: OpenDoc Template #----> Required
-remote_theme: opendocsg/opendoc-theme@v2
->>>>>>> 3285466669e1409eafe4c6e13bed5b1482706821
 timezone: Asia/Singapore
 repository: opendocsg/opendoc-template #----> Required
 plugins:
