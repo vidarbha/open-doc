@@ -49,10 +49,10 @@
             },
             
         {
-                name: "sample.md",
+                name: "index.md",
                 title: "Sample page",
-                url: "/sample.html",
-                escapedPath: "sample.md",
+                url: "/",
+                escapedPath: "index.md",
                 dir: "/",
                 tocId: "toc_/",
                 documentInfo: ["",null,null]

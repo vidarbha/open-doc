@@ -42,7 +42,7 @@
     var editButtons = document.querySelectorAll('.edit-btn')
     editButtons.forEach(function (btn) {
         btn.addEventListener('click', function () {
-            var repoUrl = 'https://github.com/opendocsg/opendoc-sensor-data-exchange' + '/blob/master/'
+            var repoUrl = 'https://github.com/opendocsg/opendoc-template' + '/blob/master/'
             var page = pageIndex[window.location.pathname]
             var pageUrl = page ? page.escapedPath : null
             if (pageUrl) {
@@ -61,7 +61,7 @@
     printButtons.forEach(function (btn) {
         btn.addEventListener('click', function () {
             // S3 folder name; replace slashes to avoid creating sub-folders
-            var replacedRepoName = 'opendocsg/opendoc-sensor-data-exchange'.replace(/\//g, '-') + (isProd ? '' : '-staging')
+            var replacedRepoName = 'opendocsg/opendoc-template'.replace(/\//g, '-') + (isProd ? '' : '-staging')
             var pdfUrl = 'false' === 'true' ?
                 '/assets/pdfs' :
                 'https://opendoc-theme-pdf.s3-ap-southeast-1.amazonaws.com/' + replacedRepoName

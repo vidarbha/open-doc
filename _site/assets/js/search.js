@@ -48,7 +48,7 @@
     // ===========================================================================
     var endpoint = null
     var env = 'development'
-    var elasticSearchIndex = 'opendocsg-opendoc-sensor-data-exchange'
+    var elasticSearchIndex = 'opendocsg-opendoc-template'
 
     if (env === 'production') {
         endpoint = 'https://search.opendoc.sg/' + elasticSearchIndex
