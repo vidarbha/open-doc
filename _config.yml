@@ -1,5 +1,5 @@
 title: Sensor Data Exchange
-remote_theme: opendocsg/opendoc-theme@master
+remote_theme: opendocsg/opendoc-theme
 timezone: Asia/Singapore
 repository: opendocsg/opendoc-sensor-data-exchange
 plugins:
@@ -18,3 +18,4 @@ styling_options:
   logo_path: /assets/logo.png  #----> Optional, path to logo
   opendoc_logo_path: /assets/images/logo-full.png
   feedback_url: https://form.gov.sg/5cee3d46138e3200109244df #----> Optional, feedback url
+
