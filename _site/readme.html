@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>How to create a new Opendoc | open-doc</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="How to create a new Opendoc" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Testing AWS Amplify" />
+<meta property="og:description" content="Testing AWS Amplify" />
+<meta property="og:site_name" content="open-doc" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"How to create a new Opendoc","url":"/readme","description":"Testing AWS Amplify","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=679af500f2118ea491016c2b9df6d86ff809a973">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="/">open-doc</a></h1>
+      
+
+      <h1 id="how-to-create-a-new-opendoc">How to create a new Opendoc</h1>
+
+<h2 id="task-list">Task List</h2>
+
+<p><strong>!!! Check that all the tasks below are completed before deployment</strong></p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create new repo from this template</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Update config file (title, icon, color, order, etc…)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Configure github webhook and secret</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Set up netlify/amplify deployment</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Set PDF Lambda env vars</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Change domain settings</li>
+</ul>
+
+<h2 id="github">Github</h2>
+
+<p>Step 1:
+Create a new repo, the name of the repo should follow the convention:</p>
+
+<p><code class="language-plaintext highlighter-rouge">opendoc-&lt;name_of_document&gt;</code></p>
+
+<p>Step 2:
+Clone the template repo onto your local machine</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/opendocsg/opendoc-template.git opendoc-&lt;name_of_document&gt;
+</code></pre></div></div>
+
+<p>Step 3: 
+Change the remote url for the repo on your local machine</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote set-url origin https://github.com/opendocsg/opendoc-&lt;name_of_document&gt;.git
+</code></pre></div></div>
+<p>or (if you’re using ssh)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote set-url origin git@github.com:opendocsg/opendoc-&lt;name_of_document&gt;.git
+</code></pre></div></div>
+
+<p>Step 4: 
+Add your converted markdown files into the root directory of the repo</p>
+
+<p>Step 5: 
+Update the following fields in the _config.yml file:</p>
+<ul>
+  <li>title (Required)</li>
+  <li>repository (Required)</li>
+  <li>order (Optional)</li>
+  <li>google_analytics(Optional)</li>
+  <li>styling_options
+    <ul>
+      <li>primary_brand_color (Optional)</li>
+      <li>logo_path (Optional)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Step 6: 
+Commit your changes</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+git commit -m &lt;commit_message&gt;
+</code></pre></div></div>
+
+<p>Step 7:
+Push your changes to the remote branch</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin master
+</code></pre></div></div>
+
+<p>Step 8:
+Verify changes on Github</p>
+
+<p>Step 9:
+Setup up webhooks for</p>
+<ul>
+  <li>https://search.opendoc.sg/push</li>
+  <li>https://search-staging.opendoc.sg/push</li>
+</ul>
+
+<p>Ensure Content type is set to <code class="language-plaintext highlighter-rouge">application/json</code></p>
+
+<p>Webhook secret is found in 1Password</p>
+
+<h2 id="netlify">Netlify</h2>
+
+<p>Step 1: 
+On Netlify, click on <code class="language-plaintext highlighter-rouge">New site From Git</code></p>
+
+<p>Step 2:
+Select Github &gt; Select repository</p>
+
+<p>Step 3:
+Click on <code class="language-plaintext highlighter-rouge">Deploy Site</code></p>
+
+<p>Step 4:
+Go to <code class="language-plaintext highlighter-rouge">Domain Settings</code> &gt; click on … on the default subdomain  &gt; <code class="language-plaintext highlighter-rouge">Edit site name</code> &gt; Input new netlify site subdomain</p>
+
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>
